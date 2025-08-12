@@ -1,0 +1,10 @@
+﻿<Solution>
+    <Folder Name="/Solution Items/">
+        <File Path="Directory.Packages.props" />
+    </Folder>
+    <Project Path="AvaloniaWebTest.Android\AvaloniaWebTest.Android.csproj" />
+    <Project Path="AvaloniaWebTest.Browser\AvaloniaWebTest.Browser.csproj" />
+    <Project Path="AvaloniaWebTest.Desktop\AvaloniaWebTest.Desktop.csproj" />
+    <Project Path="AvaloniaWebTest.iOS\AvaloniaWebTest.iOS.csproj" />
+    <Project Path="AvaloniaWebTest\AvaloniaWebTest.csproj" />
+</Solution>
