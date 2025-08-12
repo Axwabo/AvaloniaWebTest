@@ -20,11 +20,19 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
+          
+      - name: Install wasm-tools
+        run: dotnet workload install wasm-tools
 
       - name: Build
-        run: |
-          cd AvaloniaWebTest.Web
-          dotnet publish -c:Release -o ${{ env.OUT }}
+        working-directory: ${{ github.workspace }}/AvaloniaTest.Web
+        run: dotnet publish -o ${{ env.OUT }}
+
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.OUT }}
   
   deploy:
     runs-on: ubuntu-latest
